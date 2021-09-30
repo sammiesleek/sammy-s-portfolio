@@ -1,0 +1,1 @@
+This is a responsive portfolio webapp, for a full stack developer

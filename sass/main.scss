@@ -1,21 +1,251 @@
+$color1:#fcd201;
+$color2:#cca114;
+$color3:rgb(33,33,33);
+$white:white;
+$black:black;
+.wrap{
+    padding:0px 5%;
+}
+@mixin transition-ease{
+    transition:all 0.5s ease-in-out;
+}
+img{
+    width:100%;
+}
+
 *{
     box-sizing: border-box;
+    padding:0;
+    margin:0;
 }
 a{
     text-decoration:none;
 }
 
 body{
-    .wrapper{
-        position:relative;
-        nav{
+    color:white;
+    nav{
             position: fixed;
             height:100vh;
-            width:100px;
-            background:red;
+            width:70px;
+            background:$color3;
             top:0;
-            left:0;
+            left:-100%;
+            opacity:0;
             display: flex;
+            flex-direction: column;
+            z-index:10;
+            @include transition-ease;
+            &.open{
+                left:0;
+                opacity:1;
+            }
+            .he-ad{
+                display:flex;
+                width:100%;
+                height:70px;
+                align-items:center;
+                justify-content: center;
+                background:$color2;
+            }
+            .cont{
+                display:flex;
+                align-items:center;
+                flex-direction: column;
+                justify-content: center;
+
+                .nav-link{
+                    
+                    width:100%;
+                    padding:10px 0px;
+                    border-bottom: 1px solid black;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    &:last-child{
+                        border-bottom:none;
+                    }
+                    i{
+                        font-size:30px;
+                        color:$white;
+                    }
+                }
+            }
+    }
+    .menu-bar{
+        position:fixed;
+        transform: translate(-5%, -50%);
+        cursor:pointer;
+        display: flex;
+        padding:15px 3px;
+        @include transition-ease;
+        left:82vw;
+        top:92Vh;
+        z-index:10;
+        background: $color2;
+        border-radius: 50%;
+        width:50px;
+        height:50px;
+        align-items: center;
+        justify-content:center;
+       
+
+        .hamburger{
+
+            background:$white
+            ;
+            height:3px;
+            width:26px;
+            @include transition-ease;
+            &::before{
+                content:'';
+                width:26px;
+                height:3px;
+                background:$white;
+                display:block;
+                margin-top:-8px;
+                position:absolute;
+                @include transition-ease;   
+            }
+            &::after{
+                content:'';
+                width:26px;
+                height:3px;
+                background:$white;
+                display:block;
+                margin-top:8px;
+                position:absolute;
+                 @include transition-ease;
+            }
+            &.open{
+                background:transparent;
+                transform:rotate(720deg);
+                &::before{
+                    transform:rotate(45deg) translate(6px,6px);
+                }
+                &::after{
+                    transform:rotate(-45deg) translate(6px,-5px);
+                    
+                }
+            }
+        }
+    }
+    .wrapper{
+        position:relative;
+        background:$black;
+        .home{
+            display: flex;
+            .box{
+                display:grid;
+                grid-template-columns: 1fr;
+                .info{
+                    display:flex;
+                    flex-direction: column;
+                    padding:15% 0px;
+                    .int{
+                        color:white;
+                        font-size:15px;
+                        .name{
+                            font-size: 30px;
+                            color:$white;
+                        }
+                    }
+                    .role{
+                        font-size:15px;
+                        color:$color1;
+                        .name{
+                            font-size:35px;
+                        }
+                    }
+                    .desc{
+                        font-size:15px;
+                        margin-top:15px;
+                    }
+                    .gt{
+                        display:flex;
+                        align-items: center;
+                        margin-top:15px;
+                       
+                        .rqs{
+                            background:$color1;
+                            padding:8px 15px;
+                            color:$white;
+                            margin-right:10px;
+                            font-weight:600;
+                        }
+                        .lnk{
+                            width:40px;
+                            height:40px;
+                            border-radius: 50%;
+                            margin-left:10px;
+                            display:flex;
+                            align-items: center;
+                            justify-content: center;
+                            background:$color1;
+                            color:$white;
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (min-width:500px) {
+    body{
+        .menu-bar{
+             left:90vw;
+        }
+    }
+   
+}
+@media screen and (min-width:600px) {
+    body{
+        .menu-bar{
+        }
+    }
+   
+}
+@media screen and(min-width:700px) {
+     body{
+        
+            nav{
+                left:0;
+                opacity:1;
+            }
+
+        .menu-bar{
+             display:none;
+             opacity:none;
+        }
+        
+    }
+}
+@media screen and(min-width:900px) {
+    body{
+        .wrapper{
+            nav{
+                width:90px;
+            }
+        }
+    }
+}
+@media screen and(min-width:1300px) {
+     body{
+        .wrapper{
+            nav{
+                
+            }
+        }
+
+    }
+}
+@media screen and(min-width:1500px) {
+     body{
+        .wrapper{
+            nav{
+                width:90px;
+            }
         }
     }
 }
