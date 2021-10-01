@@ -181,7 +181,7 @@ body .menu-bar .hamburger.open::after {
 
 body .wrapper {
   position: relative;
-  background: black;
+  background: #0e0e17;
 }
 
 body .wrapper .home {
@@ -196,6 +196,7 @@ body .wrapper .home {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  background: black;
 }
 
 body .wrapper .home .box {
@@ -400,6 +401,7 @@ body .wrapper .portfolio {
           justify-content: center;
   padding: 15% 0px;
   min-height: 100vh;
+  background: black;
 }
 
 body .wrapper .portfolio .wrap .box {
@@ -473,6 +475,14 @@ body .wrapper .portfolio .wrap .box .item .details .btn i {
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
+}
+
+body .wrapper .reviews {
+  padding: 30px 0px;
+}
+
+body .wrapper .reviews .wrap {
+  margin: 0 auto;
 }
 
 body .wrapper .footer {
@@ -661,8 +671,8 @@ body .wrapper .footer .wrap .box .msgBox form .btn-sub:hover {
     opacity: none;
   }
   body .wrapper {
-    width: calc( 100vw - 50px);
-    left: 50px;
+    width: calc( 100vw - 80px);
+    left: 80px;
   }
   body .wrapper .home .box {
     -ms-grid-columns: (1fr)[2];
