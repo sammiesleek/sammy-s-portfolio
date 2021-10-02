@@ -29,7 +29,7 @@ html{
 	box-shadow: 0 9px 26px rgba(58, 87,135,0.45);
 	transition: all 200ms linear;
 	outline: none;
-	/* display: none; */
+	display: none;
 }
 .listing-carousel-button.listing-carousel-button-next{
 	right: -30px;
@@ -85,25 +85,25 @@ html{
 	transition: all 400ms linear;
 	top: 25px;
 	left: 30px;
-}
+}1
 .testimonials-text .listing-rating{
 	float: none;
 	display: inline-block;
 	margin-bottom: 12px;
 }
 .listing-rating i{
-	color: rgb(4, 175, 118);
+	color: #FF9301;
 }
 .testimonials-avatar h3{
 	font-weight: 600;
-	color: rgb(4, 175, 118);
+	color: #FF9301;
 	font-size: 18px;
 }
 .testimonials-avatar h4{
 	 font-weight:400;
 	 font-size:12px;
 	 padding-top:6px;
-	 color:rgb(4, 175, 118);
+	 color:#FF9301;
 }
 .testimonials-carousel .swiper-slide{
 	padding: 30px 0;
