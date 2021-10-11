@@ -588,7 +588,7 @@ body .wrapper .portfolio .wrap .box .item .details .info {
 
 body .wrapper .portfolio .wrap .box .item .details .view .lnk i {
   color: #FF9301;
-  font-size: 30px;
+  font-size: 25px;
 }
 
 body .wrapper .portfolio .wrap .box .item .details .view .lnk i:last-child {
@@ -886,5 +886,116 @@ body .wrapper .footer .wrap .msgBox form .btn-sub:hover {
   body .wrapper .footer .wrap {
     min-width: 1200px;
   }
+}
+
+.C_review {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: -webkit-gradient(linear, left bottom, left top, from(#0e0e17), to(black));
+  background: linear-gradient(360deg, #0e0e17, black);
+  height: 100vh;
+  width: 100vw;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.C_review .form {
+  width: 450px;
+  height: 550px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-radius: 8px;
+}
+
+.C_review .form h1 {
+  margin: 15px;
+}
+
+.C_review .form .mssg {
+  margin-top: 30px;
+  background: #FF9301;
+}
+
+.C_review .form .mssg p {
+  padding: 10px;
+  font-style: italic;
+  font-weight: 300;
+}
+
+.C_review .form form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  padding: 30px 20px;
+}
+
+.C_review .form form input {
+  padding: 12px;
+  margin-bottom: 20px;
+  outline: none;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: white;
+}
+
+.C_review .form form input:focus {
+  outline: none;
+}
+
+.C_review .form form textarea {
+  padding: 10px;
+  margin-bottom: 20px;
+  outline: none;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: white;
+}
+
+.C_review .form form textarea:focus {
+  outline: none;
+}
+
+.C_review .form form .sub input {
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: transparent;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 8px 20px;
+  font-weight: 600;
+  font-size: 16px;
+  outline: none;
+  border-radius: 5px;
+  color: white;
+}
+
+.C_review .form form .sub input:hover {
+  background: white;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  color: #0e0e17;
 }
 /*# sourceMappingURL=main.css.map */
