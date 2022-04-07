@@ -9,7 +9,7 @@
                 <li><a href="manage-projects.php">Manage Projects</a></li>
             </ul>
         </li>
-        <li><a href="add-projects.php"><i class="fa fa-desktop"></i> reviews</a>
+        <li><a href="reviews.php"><i class="fa fa-desktop"></i> reviews</a>
         <li><a href="add-projects.php"><i class="fa fa-desktop"></i> Messages</a>
 
         </li>

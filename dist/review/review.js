@@ -22,9 +22,9 @@ if(logbtn){
                  mssg.innerHTML=data;
                 
                     setTimeout(() => {
-                        location.href="../index.html"
+                        location.href="../index.php"
 
-                    }, 3000);
+                    }, 2000);
                     
                 
                 

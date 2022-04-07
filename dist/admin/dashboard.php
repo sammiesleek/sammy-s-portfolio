@@ -3,6 +3,9 @@ session_start();
 include('includes/config.php');
 include('controller/checklogin.php');
 check_login();
+
+// project 
+
 $sql ="SELECT * FROM project";
 $stm =$conn->prepare($sql);
 $stm->execute();
@@ -13,6 +16,31 @@ if($count < 2){
 }else{
     $hd = 'Projects';
 }
+
+// review 
+
+$sql ="SELECT * FROM review";
+$stm =$conn->prepare($sql);
+$stm->execute();
+$result= $stm->get_result();
+$rcount = $result->num_rows;
+if($count < 2){
+    $rv = 'Review';
+}else{
+    $rv = 'Reviews';
+}
+
+// message 
+// $sql ="SELECT * FROM mssge";
+// $stm =$conn->prepare($sql);
+// $stm->execute();
+// $result= $stm->get_result();
+// $mcount = $result->num_rows;
+// if($count < 2){
+//     $ms = 'Review';
+// }else{
+//     $m = 'Reviews';
+// }
 
 ?>
 <!doctype html>
@@ -72,11 +100,12 @@ if($count < 2){
                                         <div class="panel panel-default">
                                             <div class="panel-body bk-success text-light">
                                                 <div class="stat-panel text-center">
-                                                    <div class="stat-panel-number h1 ">7</div>
-                                                    <div class="stat-panel-title text-uppercase">Reviews </div>
+                                                    <div class="stat-panel-number h1 "><?php echo $rcount ;?></div>
+                                                    <div class="stat-panel-title text-uppercase"><?php echo $rv ?>
+                                                    </div>
                                                 </div>
                                             </div>
-                                            <a href="manage-rooms.php" class="block-anchor panel-footer text-center">See
+                                            <a href="reviews.php" class="block-anchor panel-footer text-center">See
                                                 All &nbsp; <i class="fa fa-arrow-right"></i></a>
                                         </div>
                                     </div>

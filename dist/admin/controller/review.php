@@ -4,6 +4,7 @@
     $review = mysqli_real_escape_string($conn,$_POST['urv']);
     // $name = mysqli_real_escape_string($con,$_POST['uname']);
     $output="";
+    $status=false;
     if(!empty($name) && !empty($review)){
         if(isset($_FILES['uimg'])){
                  $img_name = $_FILES['uimg']['name'];
@@ -17,11 +18,12 @@
 
                         $time = time();
                         $new_img_name = $time.$img_name;
-                         $query = "INSERT INTO review (u_name,review,img)   VALUES (?,?,?)";
+
+                         $query = "INSERT INTO review (u_name,review,img,sts)   VALUES (?,?,?,?)";
                          $stmt=$conn->prepare($query);
-                        if($stmt->bind_param('sss',$name,$review,       $new_img_name)){
+                        if($stmt->bind_param('sssi',$name,$review, $new_img_name,$status)){
                             if($stmt->execute()){
-                                move_uploaded_file($tmp_name, "../../review/rpmg/".$new_img_name);
+                                move_uploaded_file($tmp_name, "../../review/rpmg/".$new_img_name,);
                                 $output .='
                                     <p>Thank you for your review, it has been submitted.</p>
                                 ';

@@ -14,7 +14,7 @@
 
     if(!empty($_POST['username']) ){
         if(!empty($_POST['Pass'])){
-            $query = "SELECT * FROM access WHERE email=? OR username=? LIMIT 1";
+            $query = "SELECT * FROM access WHERE email=? OR usernname=? LIMIT 1";
             $stmt=$conn->prepare($query);
             $stmt->bind_param('ss',$acess,$acess);
             $stmt->execute();
@@ -25,7 +25,7 @@
             if($count >0 ){
                 $user = $result->fetch_assoc();
                 if(password_verify($Pass, $user ['pass'])){
-                    $_SESSION['username'] = $user['username'];
+                    $_SESSION['username'] = $user['usernname'];
                     echo 'success';
                 }else{
                     echo 'wrong password';
