@@ -4,7 +4,7 @@ include('../includes/config.php');
 
 $root =
 $output = "";
-$sql = "SELECT * FROM review";
+$sql = "SELECT * FROM message";
 $stmt =$conn->prepare($sql);
 if($stmt->execute()){
 	$result = $stmt->get_result();
@@ -18,21 +18,13 @@ if($stmt->execute()){
                 <div class="col-md-4">
                     <div class="panel panel-default">
                         <div class="bo-x" ">
-                          <img src="../review/rpmg/'.$row['img'].'">
+                          <span> '.$row['Pname'].'<?span>
                             <div class="">
                                 <div class="">
-                                    '.$row['review'].'
+                                    '.$row['Pmessage'].'
                                 </div>
                             </div>
                         </div>
-
-
-                         <a id="approvebtn" class="approvebtn" href="controller/aprev.php?timeP='.$row['timeofpost'].'" class="block-anchor panel-footer">Approve
-                            <i class="fa fa-arrow-right"></i></a>
-                         <a class="turnoffbtn" href="controller/turnoff-review.php?timeP= '.$row['timeofpost'].'" id="delete_button" class=" block-anchor panel-footer"> Turn Off
-                            <i class="dell fa fa-close"></i></a>
-                   
-
 
                         
                     </div>
@@ -42,7 +34,7 @@ if($stmt->execute()){
         }
         echo $output;
 	}else{
-		echo 'no Review';
+		echo 'no message';
 	}
 }else{
     echo 'error';

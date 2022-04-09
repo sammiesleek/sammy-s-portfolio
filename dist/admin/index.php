@@ -59,14 +59,17 @@
                 <div class="row">
                     <div class="col-md-6 col-md-offset-3" style="margin-top:4%">
                         <h1 class="text-center text-bold text-light mt-4x">Dashboard Login</h1>
-                        <div class="well row pt-2x pb-3x bk-light">
+                        <div class=" row pt-2x pb-3x ">
                             <div class="col-md-8 col-md-offset-2 fourm">
 
                                 <form action="" class="mt " method="post">
-                                    <label for="" class="text-uppercase text-sm">Your Username or Email</label>
-                                    <input type="text" placeholder="Username" name="username" class="form-control mb">
-                                    <label for="" class="text-uppercase text-sm">Password</label>
-                                    <input type="password" placeholder="Password" name="Pass" class="form-control mb">
+                                    <label for="" style="color:white" class="text-uppercase text-sm">Your Username or
+                                        Email</label>
+                                    <input type="text" style="background:transparent !important  " placeholder=""
+                                        name="username" class="form-control mb">
+                                    <label style="color:white" for="" class="text-uppercase text-sm">Password</label>
+                                    <input style="background:transparent !important " type="password" placeholder=""
+                                        name="Pass" class="form-control mb">
 
 
                                     <input type="submit" name="Login" id="Logbt" class="btn btn-primary  btn-block"

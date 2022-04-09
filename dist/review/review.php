@@ -12,7 +12,7 @@
 <body>
     <div class="C_review">
         <div class="form">
-            <h1>Review form</h1>
+            <h1>Feedback</h1>
             <div class="mssg">
 
             </div>

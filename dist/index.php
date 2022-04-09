@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/LOGO3.png" type="image/png">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/swipperstyle.css">
 
@@ -16,7 +17,7 @@
 <body>
     <nav class="nav_bar">
         <div class="he-ad">
-            <h3 class="log">SA</h3>
+            <h3 class="log"><img src="img/LOGO2.png" alt=""></h3>
         </div>
         <div class="cont">
             <a href="#home" class="nav-link"><i class="icon icofont-home"></i></a>

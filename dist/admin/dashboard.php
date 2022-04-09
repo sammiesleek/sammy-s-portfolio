@@ -31,16 +31,16 @@ if($count < 2){
 }
 
 // message 
-// $sql ="SELECT * FROM mssge";
-// $stm =$conn->prepare($sql);
-// $stm->execute();
-// $result= $stm->get_result();
-// $mcount = $result->num_rows;
-// if($count < 2){
-//     $ms = 'Review';
-// }else{
-//     $m = 'Reviews';
-// }
+$sql3 ="SELECT * FROM message";
+$stm =$conn->prepare($sql3);
+$stm->execute();
+$result= $stm->get_result();
+$mcount = $result->num_rows;
+if($count < 2){
+    $ms = 'Message';
+}else{
+    $ms = 'Messages';
+}
 
 ?>
 <!doctype html>
@@ -113,13 +113,14 @@ if($count < 2){
                                         <div class="panel panel-default">
                                             <div class="panel-body bk-info text-light">
                                                 <div class="stat-panel text-center">
-                                                    <div class="stat-panel-number h1 ">90</div>
-                                                    <div class="stat-panel-title text-uppercase">Messages</div>
+                                                    <div class="stat-panel-number h1 "><?php echo $ms ?></div>
+                                                    <div class="stat-panel-title text-uppercase">
+                                                        <?php echo $mcount ?> </div>
                                                 </div>
                                             </div>
-                                            <a href="manage-courses.php"
-                                                class="block-anchor panel-footer text-center">See All &nbsp; <i
-                                                    class="fa fa-arrow-right"></i></a>
+                                            <a href="messages.php" class="block-anchor panel-footer text-center">See
+                                                All
+                                                &nbsp; <i class="fa fa-arrow-right"></i></a>
                                         </div>
                                     </div>
 

@@ -29,7 +29,7 @@ if($stmt->execute()){
                                                 <i class="fa fa-star"></i>
                                                 <i class="fa fa-star"></i>
                                             </div>
-                                            <p>pimg/'.$row['review'].'</p>
+                                            <p>'.$row['review'].'</p>
                                             <a href="#" class="text-link"></a>
                                             <div class="testimonials-avatar">
                                                 <h3>'.$row['u_name'].'</h3>

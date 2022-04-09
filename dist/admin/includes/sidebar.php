@@ -10,7 +10,7 @@
             </ul>
         </li>
         <li><a href="reviews.php"><i class="fa fa-desktop"></i> reviews</a>
-        <li><a href="add-projects.php"><i class="fa fa-desktop"></i> Messages</a>
+        <li><a href="messages.php"><i class="fa fa-desktop"></i> Messages</a>
 
         </li>
 </nav>

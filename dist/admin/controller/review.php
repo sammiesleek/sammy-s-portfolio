@@ -4,7 +4,7 @@
     $review = mysqli_real_escape_string($conn,$_POST['urv']);
     // $name = mysqli_real_escape_string($con,$_POST['uname']);
     $output="";
-    $status=false;
+    $status=true;
     if(!empty($name) && !empty($review)){
         if(isset($_FILES['uimg'])){
                  $img_name = $_FILES['uimg']['name'];

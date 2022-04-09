@@ -1,4 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap');
+
+// @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+
 $color1:#FF9301;
 $bg:#0e0e17;
 $color2:#CC7500;
@@ -6,8 +13,14 @@ $color3:#0D0D0D;
 $white:white;
 $black:black;
 
+// $lato: 'Lato', sans-serif;
+// $rale:'Rale', sans-serif;
+$font:'Lato', sans-serif;
+
+
 h1,h2,h3,h4,h5,h6,p{
     line-height:1.2;
+    
 }
 html{
     scroll-behavior: smooth;
@@ -34,6 +47,7 @@ html{
          background:$black;
     }
 }
+
 .wrap{
     padding:0px 20px;
     .head{
@@ -82,7 +96,7 @@ a{
 body{
     color:white;
     overflow-x:hidden;
-    font-family: 'Rubik', sans-serif;
+    font-family: $font;
     nav{
         position: fixed;
         height:100vh;
@@ -110,6 +124,13 @@ body{
             align-items:center;
             justify-content: center;
             background:$color1;
+            .log{
+                padding: 10px;
+                img{
+                    width: 100%;
+                    // display: none;
+                }
+            }
         }
         .cont{
             margin-top:25px;
