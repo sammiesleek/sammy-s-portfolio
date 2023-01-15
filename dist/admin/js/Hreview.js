@@ -33,6 +33,7 @@ const loadrev = ()=>{
             if(xhr.status === 200){
                 let data = xhr.response;
                 cover.innerHTML=data;
+                console.log(data)
                 
             }
 
@@ -43,4 +44,6 @@ const loadrev = ()=>{
 
 
 }
-loadrev();
+// loadrev()
+setInterval( loadrev(),
+5000 )

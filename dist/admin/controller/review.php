@@ -24,9 +24,7 @@
                         if($stmt->bind_param('sssi',$name,$review, $new_img_name,$status)){
                             if($stmt->execute()){
                                 move_uploaded_file($tmp_name, "../../review/rpmg/".$new_img_name,);
-                                $output .='
-                                    <p>Thank you for your review, it has been submitted.</p>
-                                ';
+                                $output .='success';
                             }else{
                                  $output .='
                                     <p>An error as occured, please try again.</p>

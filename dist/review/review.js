@@ -19,12 +19,19 @@ if(logbtn){
         if(xhr.readyState == XMLHttpRequest.DONE){
             if(xhr.status === 200){
                 let data = xhr.response;
-                 mssg.innerHTML=data;
-                
-                    setTimeout(() => {
+                if(data == 'success'){
+                    mssg.innerHTML= '<p> Review submmited, Thank you. </P>'
+                      setTimeout(() => {
                         location.href="../index.php"
 
-                    }, 2000);
+                    }, 3000);
+                }else{
+
+                    mssg.innerHTML=data;
+                }
+
+                
+                  
                     
                 
                 
